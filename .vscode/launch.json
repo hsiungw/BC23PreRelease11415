@@ -1,0 +1,17 @@
+{
+    "version":  "0.2.0",
+    "configurations":  [
+                           {
+                               "breakOnError":  true,
+                               "serverInstance":  "BC",
+                               "type":  "al",
+                               "server":  "http://bc23",
+                               "launchBrowser":  true,
+                               "name":  "bc23",
+                               "port":  7049,
+                               "authentication":  "UserPassword",
+                               "request":  "launch",
+                               "tenant": "default"
+                           }
+                       ]
+}

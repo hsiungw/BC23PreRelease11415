@@ -1,0 +1,14 @@
+{
+    "al.enableCodeAnalysis":  false,
+    "al.incrementalBuild":  true,
+    "al.enableCodeActions":  false,
+    "al.assemblyProbingPaths":  [
+                                    ".netpackages",
+                                    "C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App\\6.0.18",
+                                    "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\6.0.18",
+                                    "C:\\ProgramData\\BcContainerHelper\\Extensions\\bc23\\.netPackages",
+                                    "D:\\BcContainerHelper\\Extensions\\bc23\\.netPackages"
+                                ],
+    "al.packageCachePath":  ".alpackages",
+    "editor.codeLens":  false
+}

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ValueEntryDocumentNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ValueEntryDocumentNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ValueEntryDocumentNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LocCode_ValueEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LocCode_ValueEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LocCode_ValueEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ItemLedrEntryPurCodeCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ItemLedrEntryPurCodeCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ItemLedrEntryPurCodeCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DropShip_ValueEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DropShip_ValueEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DropShip_ValueEntryCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="TodayFormatted">
+          <DataField>TodayFormatted</DataField>
+        </Field>
+        <Field Name="CaptionLedgFilter">
+          <DataField>CaptionLedgFilter</DataField>
+        </Field>
+        <Field Name="ItemLedgerFilter">
+          <DataField>ItemLedgerFilter</DataField>
+        </Field>
+        <Field Name="ValueEntryInvoicedQty">
+          <DataField>ValueEntryInvoicedQty</DataField>
+        </Field>
+        <Field Name="ValueEntryInvoicedQtyFormat">
+          <DataField>ValueEntryInvoicedQtyFormat</DataField>
+        </Field>
+        <Field Name="SalesAmtAct_ValueEntry">
+          <DataField>SalesAmtAct_ValueEntry</DataField>
+        </Field>
+        <Field Name="SalesAmtAct_ValueEntryFormat">
+          <DataField>SalesAmtAct_ValueEntryFormat</DataField>
+        </Field>
+        <Field Name="ItemDescription">
+          <DataField>ItemDescription</DataField>
+        </Field>
+        <Field Name="ItemLedgerEntryItemNo">
+          <DataField>ItemLedgerEntryItemNo</DataField>
+        </Field>
+        <Field Name="CurrReportPageNoCaption">
+          <DataField>CurrReportPageNoCaption</DataField>
+        </Field>
+        <Field Name="NonstockItemSalesCaption">
+          <DataField>NonstockItemSalesCaption</DataField>
+        </Field>
+        <Field Name="ItemNoCaption">
+          <DataField>ItemNoCaption</DataField>
+        </Field>
+        <Field Name="QuantityCaption">
+          <DataField>QuantityCaption</DataField>
+        </Field>
+        <Field Name="AmountCaption">
+          <DataField>AmountCaption</DataField>
+        </Field>
+        <Field Name="ValueEntryDocDateCaption">
+          <DataField>ValueEntryDocDateCaption</DataField>
+        </Field>
+        <Field Name="ValueEntryPostingDateCaption">
+          <DataField>ValueEntryPostingDateCaption</DataField>
+        </Field>
+        <Field Name="TotalSalesCaption">
+          <DataField>TotalSalesCaption</DataField>
+        </Field>
+        <Field Name="ValueEntryDocumentNo">
+          <DataField>ValueEntryDocumentNo</DataField>
+        </Field>
+        <Field Name="ValueEntryDocDate">
+          <DataField>ValueEntryDocDate</DataField>
+        </Field>
+        <Field Name="ValueEntryPostingDate">
+          <DataField>ValueEntryPostingDate</DataField>
+        </Field>
+        <Field Name="LocCode_ValueEntry">
+          <DataField>LocCode_ValueEntry</DataField>
+        </Field>
+        <Field Name="ItemLedrEntryPurCode">
+          <DataField>ItemLedrEntryPurCode</DataField>
+        </Field>
+        <Field Name="DropShip_ValueEntry">
+          <DataField>DropShip_ValueEntry</DataField>
+        </Field>
+        <Field Name="InvoicedQuantity">
+          <DataField>InvoicedQuantity</DataField>
+        </Field>
+        <Field Name="InvoicedQuantityFormat">
+          <DataField>InvoicedQuantityFormat</DataField>
+        </Field>
+        <Field Name="ValueEntryItemNo">
+          <DataField>ValueEntryItemNo</DataField>
+        </Field>
+        <Field Name="FormatDropShipment">
+          <DataField>FormatDropShipment</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

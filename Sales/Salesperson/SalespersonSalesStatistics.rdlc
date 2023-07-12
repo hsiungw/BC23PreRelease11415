@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReportLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReportLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PageLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PageLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PageLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AmountsInLCYLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AmountsInLCYLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AmountsInLCYLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ProfitPctLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ProfitPctLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ProfitPctLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InvDiscAmountLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>InvDiscAmountLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>InvDiscAmountLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PmtDiscGivenLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PmtDiscGivenLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PmtDiscGivenLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PmtToleranceLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PmtToleranceLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PmtToleranceLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AdjProfitPctLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AdjProfitPctLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AdjProfitPctLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AdjProfitLCYLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AdjProfitLCYLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AdjProfitLCYLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TotalLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>TotalLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TotalLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SalesLCYLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SalesLCYLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SalesLCYLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ProfitLCYLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ProfitLCYLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ProfitLCYLabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CodeLabel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CodeLabel</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CodeLabel</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="STRSUBSTNO_Text000_PeriodText_">
+          <DataField>STRSUBSTNO_Text000_PeriodText_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Salesperson_Purchaser__TABLECAPTION__________SalespersonFilter">
+          <DataField>Salesperson_Purchaser__TABLECAPTION__________SalespersonFilter</DataField>
+        </Field>
+        <Field Name="SalespersonFilter">
+          <DataField>SalespersonFilter</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry__TABLECAPTION__________CustLedgEntryFilter">
+          <DataField>Cust__Ledger_Entry__TABLECAPTION__________CustLedgEntryFilter</DataField>
+        </Field>
+        <Field Name="CustLedgEntryFilter">
+          <DataField>CustLedgEntryFilter</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Sales__LCY__">
+          <DataField>Cust__Ledger_Entry___Sales__LCY__</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Sales__LCY__Format">
+          <DataField>Cust__Ledger_Entry___Sales__LCY__Format</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Profit__LCY__">
+          <DataField>Cust__Ledger_Entry___Profit__LCY__</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Profit__LCY__Format">
+          <DataField>Cust__Ledger_Entry___Profit__LCY__Format</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Inv__Discount__LCY__">
+          <DataField>Cust__Ledger_Entry___Inv__Discount__LCY__</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Inv__Discount__LCY__Format">
+          <DataField>Cust__Ledger_Entry___Inv__Discount__LCY__Format</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Pmt__Disc__Given__LCY__">
+          <DataField>Cust__Ledger_Entry___Pmt__Disc__Given__LCY__</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Pmt__Disc__Given__LCY__Format">
+          <DataField>Cust__Ledger_Entry___Pmt__Disc__Given__LCY__Format</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Pmt__Tolerance__LCY__">
+          <DataField>Cust__Ledger_Entry___Pmt__Tolerance__LCY__</DataField>
+        </Field>
+        <Field Name="Cust__Ledger_Entry___Pmt__Tolerance__LCY__Format">
+          <DataField>Cust__Ledger_Entry___Pmt__Tolerance__LCY__Format</DataField>
+        </Field>
+        <Field Name="AdjProfit">
+          <DataField>AdjProfit</DataField>
+        </Field>
+        <Field Name="AdjProfitFormat">
+          <DataField>AdjProfitFormat</DataField>
+        </Field>
+        <Field Name="Salesperson_Purchaser_Code">
+          <DataField>Salesperson_Purchaser_Code</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

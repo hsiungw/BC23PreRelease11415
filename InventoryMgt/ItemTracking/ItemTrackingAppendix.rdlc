@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Addr1">
+          <DataField>Addr1</DataField>
+        </Field>
+        <Field Name="Addr2">
+          <DataField>Addr2</DataField>
+        </Field>
+        <Field Name="SourceCaption">
+          <DataField>SourceCaption</DataField>
+        </Field>
+        <Field Name="Addr3">
+          <DataField>Addr3</DataField>
+        </Field>
+        <Field Name="Addr4">
+          <DataField>Addr4</DataField>
+        </Field>
+        <Field Name="TodayFormatted">
+          <DataField>TodayFormatted</DataField>
+        </Field>
+        <Field Name="Addr5">
+          <DataField>Addr5</DataField>
+        </Field>
+        <Field Name="Addr6">
+          <DataField>Addr6</DataField>
+        </Field>
+        <Field Name="DocumentDate">
+          <DataField>DocumentDate</DataField>
+        </Field>
+        <Field Name="Addr7">
+          <DataField>Addr7</DataField>
+        </Field>
+        <Field Name="Addr8">
+          <DataField>Addr8</DataField>
+        </Field>
+        <Field Name="Addr2Caption">
+          <DataField>Addr2Caption</DataField>
+        </Field>
+        <Field Name="Addr21">
+          <DataField>Addr21</DataField>
+        </Field>
+        <Field Name="Addr22">
+          <DataField>Addr22</DataField>
+        </Field>
+        <Field Name="Addr23">
+          <DataField>Addr23</DataField>
+        </Field>
+        <Field Name="Addr24">
+          <DataField>Addr24</DataField>
+        </Field>
+        <Field Name="Addr25">
+          <DataField>Addr25</DataField>
+        </Field>
+        <Field Name="Addr26">
+          <DataField>Addr26</DataField>
+        </Field>
+        <Field Name="Addr27">
+          <DataField>Addr27</DataField>
+        </Field>
+        <Field Name="Addr28">
+          <DataField>Addr28</DataField>
+        </Field>
+        <Field Name="ShowAddr2">
+          <DataField>ShowAddr2</DataField>
+        </Field>
+        <Field Name="ItemTrackingAppendixCaption">
+          <DataField>ItemTrackingAppendixCaption</DataField>
+        </Field>
+        <Field Name="DocumentDateCaption">
+          <DataField>DocumentDateCaption</DataField>
+        </Field>
+        <Field Name="PageCaption">
+          <DataField>PageCaption</DataField>
+        </Field>
+        <Field Name="SerialNo_ItemTrackingLine">
+          <DataField>SerialNo_ItemTrackingLine</DataField>
+        </Field>
+        <Field Name="No_ItemTrackingLine">
+          <DataField>No_ItemTrackingLine</DataField>
+        </Field>
+        <Field Name="Desc_ItemTrackingLine">
+          <DataField>Desc_ItemTrackingLine</DataField>
+        </Field>
+        <Field Name="Qty_ItemTrackingLine">
+          <DataField>Qty_ItemTrackingLine</DataField>
+        </Field>
+        <Field Name="Qty_ItemTrackingLineFormat">
+          <DataField>Qty_ItemTrackingLineFormat</DataField>
+        </Field>
+        <Field Name="LotNo">
+          <DataField>LotNo</DataField>
+        </Field>
+        <Field Name="ShowGroup">
+          <DataField>ShowGroup</DataField>
+        </Field>
+        <Field Name="NoCaption">
+          <DataField>NoCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="QuantityCaption">
+          <DataField>QuantityCaption</DataField>
+        </Field>
+        <Field Name="LotNoCaption">
+          <DataField>LotNoCaption</DataField>
+        </Field>
+        <Field Name="SerialNoCaption">
+          <DataField>SerialNoCaption</DataField>
+        </Field>
+        <Field Name="TotalQuantity">
+          <DataField>TotalQuantity</DataField>
+        </Field>
+        <Field Name="TotalQuantityFormat">
+          <DataField>TotalQuantityFormat</DataField>
+        </Field>
+        <Field Name="ShowTotal">
+          <DataField>ShowTotal</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

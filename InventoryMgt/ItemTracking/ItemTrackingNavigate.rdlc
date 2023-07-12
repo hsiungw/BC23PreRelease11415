@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="TodayFormatted">
+          <DataField>TodayFormatted</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="Head3View">
+          <DataField>Head3View</DataField>
+        </Field>
+        <Field Name="Head4View">
+          <DataField>Head4View</DataField>
+        </Field>
+        <Field Name="Head5View">
+          <DataField>Head5View</DataField>
+        </Field>
+        <Field Name="Head6View">
+          <DataField>Head6View</DataField>
+        </Field>
+        <Field Name="FormatedSerialNoFilter">
+          <DataField>FormatedSerialNoFilter</DataField>
+        </Field>
+        <Field Name="FormatedLotNoFilter">
+          <DataField>FormatedLotNoFilter</DataField>
+        </Field>
+        <Field Name="FormatedtemNoFilter">
+          <DataField>FormatedtemNoFilter</DataField>
+        </Field>
+        <Field Name="FormatedVariantFilter">
+          <DataField>FormatedVariantFilter</DataField>
+        </Field>
+        <Field Name="ItemTrackingNavigateCaption">
+          <DataField>ItemTrackingNavigateCaption</DataField>
+        </Field>
+        <Field Name="CurrReportPageNoCaption">
+          <DataField>CurrReportPageNoCaption</DataField>
+        </Field>
+        <Field Name="NavigateFiltersCaption">
+          <DataField>NavigateFiltersCaption</DataField>
+        </Field>
+        <Field Name="TempDocEntryNoOfRecords">
+          <DataField>TempDocEntryNoOfRecords</DataField>
+        </Field>
+        <Field Name="TempDocEntryTableName">
+          <DataField>TempDocEntryTableName</DataField>
+        </Field>
+        <Field Name="PrintOnlyOnePerPage">
+          <DataField>PrintOnlyOnePerPage</DataField>
+        </Field>
+        <Field Name="RecordCounter">
+          <DataField>RecordCounter</DataField>
+        </Field>
+        <Field Name="TempRecordBufferPrimaryKey">
+          <DataField>TempRecordBufferPrimaryKey</DataField>
+        </Field>
+        <Field Name="TempRecordBufferSerialNo">
+          <DataField>TempRecordBufferSerialNo</DataField>
+        </Field>
+        <Field Name="TempRecordBufferLotNo">
+          <DataField>TempRecordBufferLotNo</DataField>
+        </Field>
+        <Field Name="TempDocEntryNoofRecordsCaption">
+          <DataField>TempDocEntryNoofRecordsCaption</DataField>
+        </Field>
+        <Field Name="TempDocEntryTableNameCaption">
+          <DataField>TempDocEntryTableNameCaption</DataField>
+        </Field>
+        <Field Name="TempRecordBufferSerialNoCaption">
+          <DataField>TempRecordBufferSerialNoCaption</DataField>
+        </Field>
+        <Field Name="TempRecordBufferLotNoCaption">
+          <DataField>TempRecordBufferLotNoCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,3 @@
+.altemplates/*.*
+.alcache/*.*
+.vscode/.alcache/*.json
